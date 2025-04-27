@@ -13,6 +13,17 @@ setup(
     py_modules=["datasette_google_analytics"],
     entry_points={"datasette": ["google_analytics = datasette_google_analytics"]},
     install_requires=["datasette>=0.54"],
-    extras_require={"test": ["pytest", "pytest-asyncio", "beautifulsoup4"]},
+    extras_require={
+        "test": [
+            "beautifulsoup4",
+            "pytest-asyncio",
+            "pytest",
+            "python-semantic-release",
+        ],
+        "build": [
+            "build",
+            "twine",
+        ],
+    },
     python_requires=">=3.9",
 )
