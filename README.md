@@ -38,7 +38,9 @@ To set up this plugin locally:
 
 ```sh
 cd datasette-google-analytics
-pip install -e .
+python -m venv venv
+source venv/bin/activate
+pip install -e '.[test]'
 ```
 
 ## How This Works

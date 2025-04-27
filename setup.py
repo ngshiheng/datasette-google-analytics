@@ -4,7 +4,7 @@ VERSION = "0.1.0"
 
 setup(
     name="datasette-google-analytics",
-    description="Datasette plugin that adds Google Analytics tracking",
+    description="Datasette plugin that adds Google Analytics tracking code to your Datasette instance",
     author="Jerry Ng",
     url="https://github.com/ngshiheng/datasette-google-analytics",
     packages=["datasette_google_analytics"],
@@ -13,5 +13,6 @@ setup(
     py_modules=["datasette_google_analytics"],
     entry_points={"datasette": ["google_analytics = datasette_google_analytics"]},
     install_requires=["datasette>=0.54"],
+    extras_require={"test": ["pytest", "pytest-asyncio", "beautifulsoup4"]},
     python_requires=">=3.8",
 )
