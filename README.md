@@ -12,11 +12,7 @@ pip install datasette-google-analytics
 
 ## Usage
 
-You need to provide your Google Analytics tracking ID when you start Datasette.
-
-### Using metadata.json
-
-Create a `metadata.json` file with the following contents:
+Configure the plugin by adding a `metadata.json` file with your Google Analytics tracking ID:
 
 ```json
 {
@@ -32,7 +28,7 @@ Replace `G-XXXXXXXXXX` with your actual Google Analytics 4 tracking ID.
 
 Then start Datasette with:
 
-```
+```sh
 datasette --metadata metadata.json your-database.db
 ```
 
@@ -44,3 +40,12 @@ To set up this plugin locally:
 cd datasette-google-analytics
 pip install -e .
 ```
+
+## How This Works
+
+1. The plugin creates a custom template that extends the default base template
+2. It uses the `extra_template_vars` hook to pass the Google Analytics tracking ID to the template
+3. It uses the `prepare_jinja2_environment` hook to modify the Jinjia2 environment by adding our template directories
+4. The custom template adds the Google Analytics tracking code in the `extra_head` block
+
+This approach follows Google's recommendations for placing the tracking code immediately after the `<head>` element.
