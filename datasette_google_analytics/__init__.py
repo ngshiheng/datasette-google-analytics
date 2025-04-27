@@ -16,7 +16,6 @@ def extra_js_urls(datasette):
     return [
         {
             "url": f"https://www.googletagmanager.com/gtag/js?id={tracking_id}",
-            "async": "async",
         }
     ]
 
