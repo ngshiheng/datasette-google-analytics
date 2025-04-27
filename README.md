@@ -35,3 +35,12 @@ Then start Datasette with:
 ```
 datasette --metadata metadata.json your-database.db
 ```
+
+## Development
+
+To set up this plugin locally:
+
+```sh
+cd datasette-google-analytics
+pip install -e .
+```

@@ -16,6 +16,7 @@ def extra_js_urls(datasette):
     return [
         {
             "url": f"https://www.googletagmanager.com/gtag/js?id={tracking_id}",
+            # NOTE: this hook currently does not support async attribute
         }
     ]
 
