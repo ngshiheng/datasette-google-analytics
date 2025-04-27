@@ -7,9 +7,11 @@ setup(
     description="Datasette plugin that adds Google Analytics tracking",
     author="Jerry Ng",
     url="https://github.com/ngshiheng/datasette-google-analytics",
+    packages=["datasette_google_analytics"],
     license="MIT",
     version=VERSION,
     py_modules=["datasette_google_analytics"],
     entry_points={"datasette": ["google_analytics = datasette_google_analytics"]},
-    install_requires=["datasette"],
+    install_requires=["datasette>=0.54"],
+    python_requires=">=3.8",
 )
