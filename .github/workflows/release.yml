@@ -33,7 +33,7 @@ jobs:
 
             - name: Install dependencies
               run: |
-                  pip install -e '.[build]'
+                  pip install '.[build]'
             - name: Build
               run: |
                   python -m build
