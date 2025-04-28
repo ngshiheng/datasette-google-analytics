@@ -32,6 +32,7 @@ setup(
     version=VERSION,
     python_requires=">=3.9",
     packages=["datasette_google_analytics"],
+    package_data={"datasette_google_analytics": ["templates/*.html"]},
     entry_points={"datasette": ["google_analytics = datasette_google_analytics"]},
     install_requires=["datasette>=0.54"],
     extras_require={
