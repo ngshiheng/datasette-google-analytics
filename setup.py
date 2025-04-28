@@ -42,8 +42,8 @@ setup(
             "python-semantic-release",
         ],
         "build": [
+            "wheel",
             "build",
-            "wheel"
             "setuptools",
         ],
     },
