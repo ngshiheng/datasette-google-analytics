@@ -43,7 +43,8 @@ setup(
         ],
         "build": [
             "build",
-            "twine",
+            "wheel"
+            "setuptools",
         ],
     },
 )
