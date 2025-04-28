@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.1.1 (2025-04-28)
+
+### Bug Fixes
+
+- Add package_data to include HTML templates in the distribution
+  ([`c675e4a`](https://github.com/ngshiheng/datasette-google-analytics/commit/c675e4a85b0773993c7aa49265420924516083ab))
+
+
 ## v0.1.0 (2025-04-28)
 
 ### Chores
