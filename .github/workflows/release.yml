@@ -26,12 +26,6 @@ jobs:
               uses: python-semantic-release/python-semantic-release@v9.21.0
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-            - name: Install dependencies
-              run: |
-                  pip install setuptools wheel build
-            - name: Build
-              run: |
-                  python -m build
             - name: Publish to PyPI
               uses: pypa/gh-action-pypi-publish@release/v1
               if: steps.release.outputs.released == 'true'

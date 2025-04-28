@@ -1,7 +1,7 @@
 from setuptools import setup
 import os
 
-VERSION = "0.1.1"
+__version__ = "0.1.1"
 
 
 def get_long_description():
@@ -27,9 +27,8 @@ setup(
     license="MIT",
     classifiers=[
         "Framework :: Datasette",
-        "License :: OSI Approved :: MIT License",
     ],
-    version=VERSION,
+    version=__version__,
     python_requires=">=3.9",
     packages=["datasette_google_analytics"],
     package_data={"datasette_google_analytics": ["templates/*.html"]},
@@ -41,11 +40,6 @@ setup(
             "pytest-asyncio",
             "pytest",
             "python-semantic-release",
-        ],
-        "build": [
-            "wheel",
-            "build",
-            "setuptools",
-        ],
+        ]
     },
 )
