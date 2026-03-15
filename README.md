@@ -2,6 +2,10 @@
 
 A [Datasette](https://datasette.io/) plugin that adds Google Analytics tracking code to your Datasette instance.
 
+<p align="center">
+  <img src="assets/demo.png">
+</p>
+
 ## Installation
 
 Install this plugin in the same environment as Datasette:
